@@ -1,11 +1,187 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+import Navbar from "../components/Navbar.jsx";
+import DesktopAnnouncement from '../components/DesktopAnnouncement.jsx';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <title>Attio Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- ✅ Favicon added -->
+ <link rel="icon" type="image/png" href="/logo.png" />
+ 
+ 
+</head>
+
+
+  <body class="bg-white text-gray-900 font-sans">
+    <!-- Navbar -->
+    <Navbar />
+
+
+    <!-- Hero Section -->
+    <section class="text-center py-20 px-4 max-w-4xl mx-auto">
+
+      <!-- Pulsing Start for Free Button like attio.com -->
+  <!-- <a href="#" class="animated-outline-btn inline-block px-10 py-2 my-6 text-1xl font text-black border border-black rounded-2xl cursor-pointer select-none bg-white relative overflow-hidden">
+  <span class="relative z-10">Attio for desktop is here</span>
+  <span class="border-animation"></span>
+</a> -->
+
+<a href="#" class="animated-outline-btn">
+  <span class="relative z-10">Attio for desktop is here <span class="arrow">→</span></span>
+  <span class="border-animation"></span>
+</a>
+
+
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        Customer<br />relationship magic.
+      </h1>
+      <p class="text-gray-600 text-lg max-w-xl mx-auto mb-8">
+        Attio is the AI-native CRM that builds, scales and grows your company to the next level.
+      </p>
+      <div class="flex justify-center flex-wrap gap-4 mb-10">
+        <a href="#" class="bg-black text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-900 transition">
+          Start for free
+        </a>
+        <a href="#" class="border border-black text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition">
+          Book a demo
+        </a>
+      </div>
+
+      <!-- Feature Tabs Section -->
+      <div class="flex justify-center flex-wrap gap-3">
+        <button class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 border border-gray-300 hover:bg-gray-200 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3h16.5M3.75 9h16.5M3.75 15h16.5M3.75 21h16.5"/>
+          </svg>
+          Data
+        </button>
+        <button class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.25L18.75 12 5.25 18.75V5.25z"/>
+          </svg>
+          Automations
+        </button>
+        <button class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <rect width="16" height="10" x="4" y="7" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 7V5m8 2V5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Pipeline
+        </button>
+        <button class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3h9A1.5 1.5 0 0 1 18 4.5v15A1.5 1.5 0 0 1 16.5 21h-9A1.5 1.5 0 0 1 6 19.5v-15A1.5 1.5 0 0 1 7.5 3z"/>
+          </svg>
+          Productivity
+        </button>
+        <button class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16M4 8h16M4 12h16M4 16h16M4 20h16"/>
+          </svg>
+          Reporting
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 border-t border-gray-200">
+      <p class="text-sm text-gray-500">© 2025 Attio Clone. All rights reserved.</p>
+    </footer>
+
+   <style>
+  .animated-outline-btn {
+    position: relative;
+    border-width: 1px;
+  }
+
+  .animated-outline-btn .border-animation {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    z-index: 1;
+    box-sizing: border-box;
+    pointer-events: none;
+    animation: borderRun 2s linear infinite;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 2%, 2% 2%, 2% 98%, 100% 98%, 100% 100%, 0% 100%, 0% 98%, 98% 98%, 98% 2%, 0% 2%);
+  }
+
+  @keyframes borderRun {
+    0% {
+      clip-path: polygon(10% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%);
+    }
+    100% {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%);
+    }
+  }
+
+  
+.animated-outline-btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem 2.5rem;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 999px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+.animated-outline-btn:hover {
+  transform: scale(1.03);
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.animated-outline-btn:hover .arrow {
+  transform: translateX(5px);
+}
+
+.border-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  pointer-events: none;
+  z-index: 0;
+  animation: draw-border 2s linear infinite;
+}
+
+@keyframes draw-border {
+  0% {
+    border-color: transparent;
+    box-shadow: inset 0 0 0 0 rgba(0,0,0,0.2);
+  }
+  50% {
+    border-color: #000;
+    box-shadow: inset 0 0 0 4px rgba(0,0,0,0.1);
+  }
+  100% {
+    border-color: transparent;
+    box-shadow: inset 0 0 0 0 rgba(0,0,0,0.2);
+  }
+}
+</style>
+  </body>
+</html>
