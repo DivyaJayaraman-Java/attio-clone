@@ -9,7 +9,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/image": "^0.18.0",
     "@astrojs/react": "^4.2.7",
     "@astrojs/tailwind": "^6.0.2",
     "@heroicons/react": "^2.2.0",
